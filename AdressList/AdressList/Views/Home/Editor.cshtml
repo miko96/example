@@ -1,0 +1,19 @@
+﻿@using AdressList.Models
+@model AdressNote
+<div class="panel-heading">
+    Add Adress
+</div>
+<div class="panel-body">
+    @using (Html.BeginForm("Add", "Home"))
+    {
+        <div class="form-group">
+            <label>Peson Name</label>
+            @Html.TextBoxFor(m => m.PersonName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Adress</label>
+            @Html.TextBoxFor(m => m.Adress, new { @class = "form-control" })
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    }
+</div>
